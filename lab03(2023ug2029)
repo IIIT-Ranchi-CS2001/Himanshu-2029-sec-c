@@ -1,0 +1,42 @@
+# 1. Squares of first n natural numbers
+n = int(input("enter n: "))
+i = 1
+while i <= n:
+    print(f"{i} {i**2}")
+    i += 1
+
+# 2. Sum of digits
+num = int(input("enter number: "))
+total = 0
+while num > 0:
+    total += num % 10
+    num //= 10
+print("sum of digits:", total)
+
+# 3. Fibonacci series
+n = int(input("enter n: "))
+a, b = 0, 1
+count = 0
+while count < n:
+    print(a, end=" ")
+    a, b = b, a + b
+    count += 1
+
+# 4. Multiplication table
+num = int(input("enter number: "))
+limit = int(input("enter limit: "))
+for i in range(1, limit + 1):
+    print(f"{num} x {i} = {num * i}")
+
+# 5. Alphanumeric check
+s = input("enter string: ")
+print(all(c.isalnum() for c in s))
+
+# 6. Count occurrences of a character
+string = input("enter string: ")
+char = input("enter character to count: ")
+count = 0
+for c in string:
+    if c == char:
+        count += 1
+print("count:", count)
